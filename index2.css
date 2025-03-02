@@ -1,0 +1,338 @@
+*{
+    margin: 0 ;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+nav{
+    background: white;
+    height: 60px;
+    width: 95%;
+    display: flex; /*GPT*/
+    justify-content: space-between; /* Ensures logo left, button right */
+    padding: 0 20px; /* Adjust spacing */
+    position: relative; /* Needed for absolute positioning of .checkbtn */
+    margin: 10px auto 0 auto; /* change to DH style */
+    border-radius: 50px;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border: 2px solid rgb(199, 199, 199);
+  
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+  
+  .logo img {
+    height: 50px; 
+    width: auto;
+    max-width: 150px;
+  }
+  
+  .logo-text {
+    font-family: 'TeX Gyre Adventor', sans-serif !important; 
+    font-size: 20px; 
+    font-weight: bold;
+    color: rgb(0, 0, 0); 
+    text-transform: uppercase;
+  }
+  
+  .menu-list{
+    display: flex; /* GPT */
+    align-items: center; /* GPT */
+  }
+  
+  nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+  
+  }
+  
+  nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+  
+  }
+  
+  nav ul li a{
+    color: black;
+    font-size: 17px;
+    padding: 5px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    
+  }
+  
+  a.active, a:hover{
+    background: #2C2E83;
+    transition: .5s;
+    color: white;
+  }
+  
+  /* HAMBURGER MENU */
+  
+  .checkbtn{
+    font-size: 30px;
+    color: black;
+    float: right;
+    line-height: 80px;
+    cursor: pointer;
+    display: none; /* GPT */
+    right: 20px; /* GPT */
+  }
+  
+  #check{
+    display: none;
+    
+  }
+  
+  @media (max-width: 952px){
+    label.logo{
+      font-size: 30px;
+      padding-right: 50px;
+    }
+    nav ul li a{
+      font-size: 16px;
+  }
+  }
+  
+  @media (max-width: 858px){
+  .menu-list{  /* GPT */
+    flex-direction: column; 
+    text-align: center;
+  }
+  
+  
+    .checkbtn{
+      display: block;
+    }
+  
+   ul{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #2c3e50;
+    top: 80px;
+    right:-100%;
+    text-align: center;
+    transition: all .5s;
+    gap: 20px; /* Reduce space between items */
+  
+   }
+   nav ul li{
+    display: block;
+    margin: 20px 0;
+    line-height: 40px;
+   }
+   nav ul li a{
+    font-size: 20px;
+    color: white;
+  
+   }
+   a:hover, a:active {
+    background: none;
+    color: #2C2E83;
+   }
+   #check:checked ~ .menu-list {
+    right: 0;
+  
+  }
+ 
+
+section{
+    background: url(bgl.jpg) no-repeat;
+    background-size: cover;
+    height: 100vh;
+    margin-top: 50px;
+}
+
+
+@font-face {
+    font-family: 'TeX Gyre Adventor';
+    src: url('tex-gyre-adventor.zip') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.hero {
+    width: 100vw; 
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    border-radius: 0;
+    margin: -70px auto 0 auto; 
+}
+
+.hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    
+}
+
+.hero-content {
+    font-family: 'Moderustic', sans-serif !important; /* Force the font */
+    position: relative;
+    color: white;
+    z-index: 1
+}
+
+
+
+.hero h1 {
+    font-family: 'Your-Font-Name', sans-serif !important;
+    font-size: 130px;
+    font-weight: bold;
+    color: white;
+}
+
+.hero p {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+.hero-btn {
+    display: inline-block;
+    background: #6465A4;
+    color: white;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.hero-btn:hover {
+    background: #2C2E83;
+}
+
+
+@media (max-width: 768px) {
+    .hero {
+        height: 60vh;
+        background-position: center;
+        background-size: cover;
+        padding: 20px;
+    }
+
+    .hero-content {
+        padding: 10px;
+    }
+
+    .hero h1 {
+        font-size: 60px;  /* Smaller font size for mobile */
+    }
+
+    .hero p {
+        font-size: 18px;  /* Adjusted font size */
+    }
+}
+
+.filter{
+    margin-top: 80px;
+    margin: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+padding: 20px;
+padding-top: 40px;
+
+}
+
+
+.sorting-container {
+    width: 1300px;
+    display: block;
+
+    text-align: center;
+    background: white;
+    padding-right: 60px;
+    padding-left: 60px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #2C2E83;
+    height: 80px;
+    margin-right: auto;
+    margin-left: auto;
+
+}
+
+
+
+.sorting-form {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 10px;
+    align-items: center;
+    border-color: white;
+}
+
+select, .search-btn {
+    padding: 12px 25px; /* Adjust padding for size */
+    font-size: 16px;
+    border: 2px solid #2C2E83; /* Match the border color */
+    border-radius: 30px; /* Oval shape */
+    background: white;
+    outline: none; /* Remove focus outline */
+    cursor: pointer;
+}
+
+select {
+    width: 200px; /* Adjust the width as needed */
+}
+
+.search-btn {
+    background: #2C2E83; /* Button background */
+    color: white; /* Text color */
+    border: none; /* Remove default border */
+    transition: 0.3s ease;
+}
+
+.search-btn:hover {
+    background-color: #453c75;
+}
+
+.sorting-form select {
+    margin-right: 10px; /* Optional: space between select elements */
+}
+
+/* Hover effect */
+.search-btn:hover {
+    background: #6465A4; /* Slightly different on hover */
+}
+
+/* Responsive adjustment for small screens */
+@media (max-width: 768px) {
+    .sorting-container {
+        width: 90%; /* Make it more compact on small screens */
+        padding: 20px 10px; /* Reduce padding */
+    }
+}
+
+
